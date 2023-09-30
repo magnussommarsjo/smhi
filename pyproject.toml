@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "smhi"
+version = "0.0.1"
+dependencies = ["httpx"]
+
+[project.optional-dependencies]
+tests = ["pytest"]
+linting = ["black", "ruff"]
+analysis = ["jupyterlab"]
+dev = ["smhi[tests,linting]", "pre-commit"]

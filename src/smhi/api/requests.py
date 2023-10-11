@@ -14,7 +14,7 @@ class RequestError(Exception):
         super().__init__(*args)
 
 
-class Period(str, enum.Enum):
+class Period(enum.StrEnum):
     LATEST_HOUR = "latest-hour"
     LATEST_DAY = "latest-day"
     LATEST_MONTHS = "latest-months"
@@ -53,7 +53,7 @@ def _get_request(endpoint: str) -> dict:
     return json.loads(response.text)
 
 
-def abut() -> dict:
+def about() -> dict:
     return _get_request(f".{_EXT}")
 
 
@@ -62,4 +62,27 @@ def version(version=VERSION) -> dict:
 
 
 def parameter(parameter: Param, version=VERSION) -> dict:
+    # TODO: Add measureing stations filter ?measuringtations={measuringStations}
     return _get_request(f"/version/{version}/parameter/{parameter}.{_EXT}")
+
+
+def station(parameter: Param, station: int, version=VERSION) -> dict:
+    return _get_request(
+        f"/version/{version}/parameter/{parameter}/station/{station}.{_EXT}"
+    )
+
+
+def station_set() -> dict:
+    raise NotImplementedError
+
+
+def period(parameter: Param, station: int, period: Period, version=VERSION) -> dict:
+    return _get_request(
+        f"/version/{version}/parameter/{parameter}/station/{station}/period/{period}.{_EXT}"
+    )
+
+
+def data(parameter: Param, station: int, period: Period, version=VERSION) -> dict:
+    return _get_request(
+        f"/version/{version}/parameter/{parameter}/station/{station}/period/{period}/data.{_EXT}"
+    )

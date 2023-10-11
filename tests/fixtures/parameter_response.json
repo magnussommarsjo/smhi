@@ -1,0 +1,101 @@
+{
+    "key": "1",
+    "updated": 1695207600000,
+    "title": "Lufttemperatur: Välj station (sedan tidsutsnitt)",
+    "summary": "momentanvärde, 1 gång/tim",
+    "unit": "celsius",
+    "valueType": "SAMPLING",
+    "link": [
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1.json",
+            "rel": "parameter",
+            "type": "application/json"
+        },
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1.xml",
+            "rel": "parameter",
+            "type": "application/xml"
+        },
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1.atom",
+            "rel": "parameter",
+            "type": "application/atom+xml"
+        },
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/metadata.json",
+            "rel": "metadata",
+            "type": "application/json"
+        },
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/metadata.xml",
+            "rel": "metadata",
+            "type": "application/xml"
+        },
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest.atom",
+            "rel": "version",
+            "type": "application/atom+xml"
+        }
+    ],
+    "stationSet": [
+        {
+            "key": "all",
+            "updated": 1695207600000,
+            "title": "Lufttemperatur - Alla Stationer",
+            "summary": "Data från alla aktiva mätstationer för senaste timmen i en fil.",
+            "link": [
+                {
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station-set/all.json",
+                    "rel": "stationSet",
+                    "type": "application/json"
+                },
+                {
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station-set/all.xml",
+                    "rel": "stationSet",
+                    "type": "application/xml"
+                },
+                {
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station-set/all.atom",
+                    "rel": "stationSet",
+                    "type": "application/atom+xml"
+                }
+            ]
+        }
+    ],
+    "station": [
+        {
+            "key": "17121000",
+            "updated": 1640995199000,
+            "title": "Lufttemperatur - 1712 Ristjärn Fjärryta",
+            "summary": "Latitud: 59.3098 Longitud: 14.2919 Höjd: 0.0",
+            "link": [
+                {
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/17121000.json",
+                    "rel": "station",
+                    "type": "application/json"
+                },
+                {
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/17121000.xml",
+                    "rel": "station",
+                    "type": "application/xml"
+                },
+                {
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/17121000.atom",
+                    "rel": "station",
+                    "type": "application/atom+xml"
+                }
+            ],
+            "name": "1712 Ristjärn Fjärryta",
+            "owner": "SMHI",
+            "ownerCategory": "NATIONAL",
+            "measuringStations": "ADDITIONAL",
+            "id": 17121000,
+            "height": 1.6,
+            "latitude": 59.3098,
+            "longitude": 14.2919,
+            "active": false,
+            "from": 1598536200000,
+            "to": 1640995199000
+        }
+    ]
+}

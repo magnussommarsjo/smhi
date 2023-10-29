@@ -6,3 +6,9 @@ import json
 def parameter_response() -> dict:
     with open("tests/fixtures/parameter_response.json", "r") as file:
         return json.load(file)
+
+
+@pytest.fixture
+def category_response() -> dict:
+    with open("tests/fixtures/category_response.json", "r") as file:
+        return json.load(file)

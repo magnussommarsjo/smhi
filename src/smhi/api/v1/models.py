@@ -10,24 +10,26 @@ class Link(BaseModel):
     type: str
 
 
-class ParameterResponse(BaseModel):
-    key: int
+class BaseInfo(BaseModel):
+    key: str
     updated: datetime.datetime
     title: str
     summary: str
+    link: list[Link]
+
+
+class CategoryResponse(BaseInfo):
+    version: list[BaseInfo]
+
+
+class ParameterResponse(BaseInfo):
     unit: str
     value_type: str = Field(alias="valueType")
-    link: list[Link]
     station_set: list[dict] = Field(alias="stationSet")  # TODO: more definitions
     station: list[Station]  # TODO: Replace with Station
 
 
 class Station(BaseModel):
-    key: int
-    updated: datetime.datetime
-    title: str
-    summary: str
-    link: list[Link]
     name: str
     owner: str
     owner_category: str = Field(alias="ownerCategory")

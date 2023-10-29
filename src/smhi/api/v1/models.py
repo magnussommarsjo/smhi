@@ -38,13 +38,6 @@ class VersionResponse(BaseInfo):
     resource: list[Resource]
 
 
-class ParameterResponse(BaseInfo):
-    unit: str
-    value_type: str = Field(alias="valueType")
-    station_set: list[dict] = Field(alias="stationSet")  # TODO: more definitions
-    station: list[Station]  # TODO: Replace with Station
-
-
 class Station(BaseModel):
     name: str
     owner: str
@@ -57,3 +50,10 @@ class Station(BaseModel):
     active: bool
     _from: datetime.datetime
     to: datetime.datetime
+
+
+class ParameterResponse(BaseInfo):
+    unit: str
+    value_type: str = Field(alias="valueType")
+    station_set: list[BaseInfo] = Field(alias="stationSet")
+    station: list[Station]

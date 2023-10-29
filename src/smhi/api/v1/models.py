@@ -47,12 +47,15 @@ class Position(BaseModel):
     longitude: float
 
 
-class Station(Position):
-    name: str
+class StationInfo(BaseModel):
     owner: str
     owner_category: str = Field(alias="ownerCategory")
     measuring_stations: str = Field(alias="measuringStations")
+
+
+class Station(Position, StationInfo):
     id: int
+    name: str
 
 
 class ParameterResponse(MetaData):
@@ -62,10 +65,7 @@ class ParameterResponse(MetaData):
     station: list[Station]
 
 
-class StationResponse(MetaData):
-    owner: str
-    owner_category: str = Field(alias="ownerCategory")
-    measuring_stations: str = Field(alias="measuringStations")
+class StationResponse(MetaData, StationInfo):
     active: bool
     _from: datetime.datetime
     to: datetime.datetime
@@ -97,15 +97,6 @@ class Parameter(BaseModel):
     unit: str
 
 
-class Station2(BaseModel):  # TODO: Really bad, fix this
-    key: str
-    name: str
-    owner: str
-    owner_category: str = Field(alias="ownerCategory")
-    measuring_stations: str = Field(alias="measuringStations")
-    height: float
-
-
 class Period(BaseModel):
     key: str
     _from: datetime.datetime
@@ -114,11 +105,17 @@ class Period(BaseModel):
     sampling: str
 
 
+class StationData(StationInfo):
+    key: str
+    name: str
+    height: float
+
+
 class DataStationResponse(BaseModel):
     value: list[Value]
     updated: datetime.datetime
     parameter: Parameter
-    station: Station2
+    station: StationData
     period: Period
     position: list[Position]
     link: list[Link]

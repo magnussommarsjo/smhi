@@ -1,4 +1,5 @@
 from __future__ import annotations
+from typing import Optional
 
 from pydantic import BaseModel, Field
 import datetime
@@ -10,16 +11,16 @@ class Link(BaseModel):
     type: str
 
 
-class BaseInfo(BaseModel):
-    key: str
+class MetaData(BaseModel):
+    key: Optional[str]
     updated: datetime.datetime
     title: str
     summary: str
     link: list[Link]
 
 
-class CategoryResponse(BaseInfo):
-    version: list[BaseInfo]
+class CategoryResponse(MetaData):
+    version: list[MetaData]
 
 
 class GeoBox(BaseModel):
@@ -29,12 +30,12 @@ class GeoBox(BaseModel):
     max_longitude: int = Field(alias="maxLongitude")
 
 
-class Resource(BaseInfo):
+class Resource(MetaData):
     unit: str
     geo_box: GeoBox = Field(alias="geoBox")
 
 
-class VersionResponse(BaseInfo):
+class VersionResponse(MetaData):
     resource: list[Resource]
 
 
@@ -54,14 +55,14 @@ class Station(Position):
     id: int
 
 
-class ParameterResponse(BaseInfo):
+class ParameterResponse(MetaData):
     unit: str
     value_type: str = Field(alias="valueType")
-    station_set: list[BaseInfo] = Field(alias="stationSet")
+    station_set: list[MetaData] = Field(alias="stationSet")
     station: list[Station]
 
 
-class StationResponse(BaseInfo):
+class StationResponse(MetaData):
     owner: str
     owner_category: str = Field(alias="ownerCategory")
     measuring_stations: str = Field(alias="measuringStations")
@@ -69,9 +70,15 @@ class StationResponse(BaseInfo):
     _from: datetime.datetime
     to: datetime.datetime
     position: list[Position]
-    period: list[BaseInfo]
+    period: list[MetaData]
 
 
 class StationSetResponse(StationResponse):
     # TODO: Should we remove if its the same?
     pass
+
+
+class PeriodResponse(MetaData):
+    _from: datetime.datetime
+    to: datetime.datetime
+    data: list[MetaData]

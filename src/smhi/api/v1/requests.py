@@ -144,6 +144,8 @@ def period(parameter: Param, station: int, period: Period, version=VERSION) -> d
     ----------
     http://opendata.smhi.se/apidocs/metobs/period.html
     """
+    # TODO: There are two diffrent api calls to this. One with station-set as well.
+    # Implement this!
     return _get_request(
         f"/version/{version}/parameter/{parameter}/station/{station}/period/{period}.{_EXT}"
     )

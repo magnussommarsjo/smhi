@@ -20,3 +20,7 @@ def test_station_response(station_response: dict) -> None:
 
 def test_station_set_response(station_set_response: dict) -> None:
     models.StationSetResponse(**station_set_response)
+
+
+def test_period_response(period_response: dict) -> None:
+    models.PeriodResponse(**period_response)

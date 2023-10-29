@@ -169,8 +169,17 @@ def data(parameter: Param, station: int, period: Period, version=VERSION) -> dic
     """
 
     if period == Period.CORRECTED_ARCHIVE:
-        # TODO: Plan to support and parse this data?
+        # TODO: Implementation of csv parsing needed.
         raise NotImplementedError("Parsing csv files is not supported.")
+
+    # TODO: Also implement station-set call. This will also result in diffrent output
+    # that needs testing.
+
+    # NOTE: We can get 4 diffrent output sets. and needs to be implemented correctly.
+    # - CSV(station)
+    # - JSON(station)
+    # - CSV(station set)
+    # - JSON(station-set)
 
     return _get_request(
         f"/version/{version}/parameter/{parameter}/station/{station}/period/{period}/data.{_EXT}"

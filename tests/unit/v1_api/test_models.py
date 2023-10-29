@@ -24,3 +24,7 @@ def test_station_set_response(station_set_response: dict) -> None:
 
 def test_period_response(period_response: dict) -> None:
     models.PeriodResponse(**period_response)
+
+
+def test_data_station_response(data_station_json_response: dict) -> None:
+    models.DataStationResponse(**data_station_json_response)

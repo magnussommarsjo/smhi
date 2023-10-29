@@ -82,3 +82,43 @@ class PeriodResponse(MetaData):
     _from: datetime.datetime
     to: datetime.datetime
     data: list[MetaData]
+
+
+class Value(BaseModel):
+    date: datetime.datetime
+    value: float
+    quality: str
+
+
+class Parameter(BaseModel):
+    key: str
+    name: str
+    summary: str
+    unit: str
+
+
+class Station2(BaseModel):  # TODO: Really bad, fix this
+    key: str
+    name: str
+    owner: str
+    owner_category: str = Field(alias="ownerCategory")
+    measuring_stations: str = Field(alias="measuringStations")
+    height: float
+
+
+class Period(BaseModel):
+    key: str
+    _from: datetime.datetime
+    to: datetime.datetime
+    summary: str
+    sampling: str
+
+
+class DataStationResponse(BaseModel):
+    value: list[Value]
+    updated: datetime.datetime
+    parameter: Parameter
+    station: Station2
+    period: Period
+    position: list[Position]
+    link: list[Link]

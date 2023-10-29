@@ -36,3 +36,15 @@ def station_set_response() -> dict:
 def period_response() -> dict:
     with open("tests/fixtures/period_response.json", "r") as file:
         return json.load(file)
+
+
+@pytest.fixture
+def data_station_json_response() -> dict:
+    with open("tests/fixtures/data_station_response.json", "r") as file:
+        return json.load(file)
+
+
+@pytest.fixture
+def data_station_set_json_response() -> dict:
+    with open("tests/fixtures/data_station_set_response.json", "r") as file:
+        return json.load(file)

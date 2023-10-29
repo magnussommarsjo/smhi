@@ -1,0 +1,82 @@
+{
+    "value": [
+        {
+            "date": 1650949200000,
+            "value": "-3.2",
+            "quality": "G"
+        },
+        {
+            "date": 1650952800000,
+            "value": "-2.3",
+            "quality": "G"
+        },
+        {
+            "date": 1650956400000,
+            "value": "-1.7",
+            "quality": "G"
+        }
+    ],
+    "updated": 1651035600000,
+    "parameter": {
+        "key": "1",
+        "name": "Lufttemperatur",
+        "summary": "momentanvärde, 1 gång/tim",
+        "unit": "degree celsius"
+    },
+    "station": {
+        "key": "159880",
+        "name": "Arvidsjaur A",
+        "owner": "SMHI",
+        "ownerCategory": "CLIMATE",
+        "measuringStations": "CORE",
+        "height": 2
+    },
+    "period": {
+        "key": "latest-day",
+        "from": 1650945601000,
+        "to": 1651035600000,
+        "summary": "Data från senaste dygnet",
+        "sampling": "Ej angivet"
+    },
+    "position": [
+        {
+            "from": 823132800000,
+            "to": 1651035600000,
+            "height": 382.45,
+            "latitude": 65.5941,
+            "longitude": 19.2642
+        }
+    ],
+    "link": [
+        {
+            "rel": "data",
+            "type": "application/json",
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/159880/period/latest-day/data.json"
+        },
+        {
+            "rel": "data",
+            "type": "application/xml",
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/159880/period/latest-day/data.xml"
+        },
+        {
+            "rel": "data",
+            "type": "text/plain",
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/159880/period/latest-day/data.csv"
+        },
+        {
+            "rel": "period",
+            "type": "application/atom+xml",
+            "href": "https://opendata-download-metobs.smhi.se/api/version/latest/parameter/1/station/159880/period/latest-day.atom"
+        },
+        {
+            "rel": "iso19139",
+            "type": "application/vnd.iso.19139+xml",
+            "href": "https://opendata-catalog.smhi.se/md/25080190-38ba-4279-a65d-d9ef8d0bf949"
+        },
+        {
+            "rel": "iso19139",
+            "type": "application/vnd.iso.19139+xml",
+            "href": "https://opendata-catalog.smhi.se/md/c6ae10b6-6a18-4e15-9444-fbd746f4609d"
+        }
+    ]
+}

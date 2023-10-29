@@ -1,0 +1,27 @@
+Parameternamn;Beskrivning;Enhet
+Lufttemperatur;momentanvärde, 1 gång/tim;degree celsius
+
+StationsId;Stationsnamn;Latitude;Longitude;Height;2015-11-04 15:00:00;Kvalitet;;Data från senaste timmen
+97280;Adelsö A;59.3582;17.5244;6.0;7.8;G;;Tidsperiod (fr.o.m.) = 2015-11-04 14:00:01 (UTC)
+167710;Arjeplog A;66.0526;17.8434;431.0;1.4;G;;Tidsperiod (t.o.m.) = 2015-11-04 15:00:00 (UTC)
+159880;Arvidsjaur A;65.5953;19.2682;382.0;3.6;G;;Samplingstid = Ej angivet
+92410;Arvika A;59.6747;12.6381;66.0;5.6;G;;
+106070;Avesta;60.1419;16.1747;100.0;;;;Kvalitetskoderna:
+84340;Axstål Mo;58.5719;14.5722;91.0;9.5;G;;Grön (G) = Kontrollerade och godkända värden.
+62180;Barkåkra;56.2979;12.8441;18.0;8.1;G;;Gul (Y) = Misstänkta eller aggregerade värden. Grovt kontrollerade arkivdata och okontrollerade realtidsdata (senaste 2 tim).
+98040;Berga Mo;59.0688;18.1184;4.0;8.4;G;;
+151280;Bjuröklubb A;64.4812;21.5791;40.0;6.5;G;;Orsaker till saknade data:
+92130;Blomskog A;59.2217;12.078;170.0;4.9;G;;  stationen eller givaren har varit ur funktion.
+132110;Blåhammaren A;63.1864;12.1761;1090.0;-0.5;G;;  kvalitetskontrollerna har felmarkerat data (röd kvalitetskod). Efterföljande manuell granskning godkänner, rättar eller underkänner data.
+161940;Boden Mo;65.8151;21.6396;25.0;7.1;G
+105260;Borlänge Flygplats;60.4294;15.5079;152.0;8.1;G
+72450;Borås;57.7611;12.9493;135.0;;
+102390;Brattmon V;60.75686;12.77226;199.0;5.1;Y
+65160;Bredåkra;56.2619;15.2742;58.0;7.0;G
+106040;Brovallen;60.0991;16.3062;100.0;;
+127130;Brämön A;62.2207;17.7426;17.0;8.8;G
+157870;Buresjön A;65.5592;17.86;393.0;3.5;G
+123460;Börtnan A;62.7557;13.8456;467.0;3.8;G
+94390;Daglösen A;59.6616;14.1831;133.0;6.6;G
+116490;Delsbo A;61.8271;16.5418;70.0;6.0;G
+123060;Dravagen A;62.0943;13.6115;566.0;3.8;G

@@ -3,7 +3,7 @@ import json
 import enum
 
 BASE_URL = "https://opendata-download-metobs.smhi.se/api"
-VERSION = "latest"
+VERSION = "1.0"
 _EXT = "json"
 
 

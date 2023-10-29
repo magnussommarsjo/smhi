@@ -16,3 +16,7 @@ def test_version_response(version_response: dict) -> None:
 
 def test_station_response(station_response: dict) -> None:
     models.StationResponse(**station_response)
+
+
+def test_station_set_response(station_set_response: dict) -> None:
+    models.StationSetResponse(**station_set_response)

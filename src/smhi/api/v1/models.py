@@ -70,3 +70,8 @@ class StationResponse(BaseInfo):
     to: datetime.datetime
     position: list[Position]
     period: list[BaseInfo]
+
+
+class StationSetResponse(StationResponse):
+    # TODO: Should we remove if its the same?
+    pass

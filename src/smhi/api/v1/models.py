@@ -38,18 +38,20 @@ class VersionResponse(BaseInfo):
     resource: list[Resource]
 
 
-class Station(BaseModel):
+class Position(BaseModel):
+    _from: datetime.datetime
+    to: datetime.datetime
+    height: float
+    latitude: float
+    longitude: float
+
+
+class Station(Position):
     name: str
     owner: str
     owner_category: str = Field(alias="ownerCategory")
     measuring_stations: str = Field(alias="measuringStations")
     id: int
-    height: float
-    latitude: float
-    longitude: float
-    active: bool
-    _from: datetime.datetime
-    to: datetime.datetime
 
 
 class ParameterResponse(BaseInfo):
@@ -57,3 +59,14 @@ class ParameterResponse(BaseInfo):
     value_type: str = Field(alias="valueType")
     station_set: list[BaseInfo] = Field(alias="stationSet")
     station: list[Station]
+
+
+class StationResponse(BaseInfo):
+    owner: str
+    owner_category: str = Field(alias="ownerCategory")
+    measuring_stations: str = Field(alias="measuringStations")
+    active: bool
+    _from: datetime.datetime
+    to: datetime.datetime
+    position: list[Position]
+    period: list[BaseInfo]

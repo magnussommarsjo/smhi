@@ -12,3 +12,7 @@ def test_category_response(category_response: dict) -> None:
 
 def test_version_response(version_response: dict) -> None:
     models.VersionResponse(**version_response)
+
+
+def test_station_response(station_response: dict) -> None:
+    models.StationResponse(**station_response)

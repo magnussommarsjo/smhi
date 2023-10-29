@@ -18,3 +18,9 @@ def category_response() -> dict:
 def version_response() -> dict:
     with open("tests/fixtures/version_response.json", "r") as file:
         return json.load(file)
+
+
+@pytest.fixture
+def station_response() -> dict:
+    with open("tests/fixtures/station_response.json", "r") as file:
+        return json.load(file)

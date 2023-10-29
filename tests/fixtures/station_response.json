@@ -1,0 +1,68 @@
+{
+    "key": "159880",
+    "updated": 1410778800000,
+    "title": "Lufttemperatur - Arvidsjaur A: Välj tidsutsnitt",
+    "owner": "SMHI",
+    "ownerCategory": "CLIMATE",
+    "measuringStations": "CORE",
+    "active": true,
+    "summary": "Latitud: 65.5941 Longitud: 19.2642 Höjd: 382.45. För data från de tre senaste hela kalendermånaderna pågår rättningsprocessen. Dessa ingår därför inte i Kvalitetskontrollerade historiska data. (Ogranskade data för dessa månader erhålls via länken till Data från senaste fyra månaderna)",
+    "from": 823132800000,
+    "to": 1650981600000,
+    "position": [
+        {
+            "from": 823132800000,
+            "to": 1410778800000,
+            "height": 382.0,
+            "latitude": 65.5953,
+            "longitude": 19.2682
+        }
+    ],
+    "link": [
+        {
+            "rel": "station",
+            "type": "application/json",
+            "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/159880.json"
+        },
+        {
+            "rel": "station",
+            "type": "application/xml",
+            "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/159880.xml"
+        },
+        {
+            "rel": "station",
+            "type": "application/atom+xml",
+            "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/159880.atom"
+        },
+        {
+            "rel": "parameter",
+            "type": "application/atom+xml",
+            "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1.atom"
+        }
+    ],
+    "period": [
+        {
+            "key": "latest-hour",
+            "updated": 1410778800000,
+            "title": "Data från senaste timmen",
+            "summary": "",
+            "link": [
+                {
+                    "rel": "period",
+                    "type": "application/json",
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/159880/period/latest-hour.json"
+                },
+                {
+                    "rel": "period",
+                    "type": "application/xml",
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/159880/period/latest-hour.xml"
+                },
+                {
+                    "rel": "period",
+                    "type": "application/atom+xml",
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station/159880/period/latest-hour.atom"
+                }
+            ]
+        }
+    ]
+}

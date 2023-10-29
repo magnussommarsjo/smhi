@@ -22,6 +22,22 @@ class CategoryResponse(BaseInfo):
     version: list[BaseInfo]
 
 
+class GeoBox(BaseModel):
+    min_latitude: int = Field(alias="minLatitude")
+    min_longitude: int = Field(alias="minLongitude")
+    max_latitude: int = Field(alias="maxLatitude")
+    max_longitude: int = Field(alias="maxLongitude")
+
+
+class Resource(BaseInfo):
+    unit: str
+    geo_box: GeoBox = Field(alias="geoBox")
+
+
+class VersionResponse(BaseInfo):
+    resource: list[Resource]
+
+
 class ParameterResponse(BaseInfo):
     unit: str
     value_type: str = Field(alias="valueType")

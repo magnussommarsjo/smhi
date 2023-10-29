@@ -1,0 +1,70 @@
+{
+    "key": "1.0",
+    "updated": 1695204000000,
+    "title": "1.0 versionen av nedladdningstjänsten: Välj parameter (sedan station och tidsutsnitt)",
+    "summary": "",
+    "link": [
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api/version/1.0.json",
+            "rel": "version",
+            "type": "application/json"
+        },
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api/version/1.0.xml",
+            "rel": "version",
+            "type": "application/xml"
+        },
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api/version/1.0.atom",
+            "rel": "version",
+            "type": "application/atom+xml"
+        },
+        {
+            "href": "https://opendata-download-metobs.smhi.se/api.atom",
+            "rel": "category",
+            "type": "application/atom+xml"
+        },
+        {
+            "href": "https://opendata-catalog.smhi.se/md/25080190-38ba-4279-a65d-d9ef8d0bf949",
+            "rel": "iso19139",
+            "type": "application/vnd.iso.19139+xml"
+        }
+    ],
+    "resource": [
+        {
+            "key": "21",
+            "updated": 1695204000000,
+            "title": "Byvind",
+            "summary": "max, 1 gång/tim",
+            "link": [
+                {
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/21.json",
+                    "rel": "parameter",
+                    "type": "application/json"
+                },
+                {
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/21.xml",
+                    "rel": "parameter",
+                    "type": "application/xml"
+                },
+                {
+                    "href": "https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/21.atom",
+                    "rel": "parameter",
+                    "type": "application/atom+xml"
+                },
+                {
+                    "href": "https://opendata-catalog.smhi.se/md/617a59fa-087b-4416-83df-486b85dcb1ed",
+                    "rel": "iso19139",
+                    "type": "application/vnd.iso.19139+xml"
+                }
+            ],
+            "unit": "meter per sekund",
+            "geoBox": {
+                "minLatitude": 55,
+                "minLongitude": 10,
+                "maxLatitude": 70,
+                "maxLongitude": 25
+            }
+        }
+    ]
+}

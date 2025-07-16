@@ -1,4 +1,4 @@
-from smhi.api.v1 import models
+from smhi.api.observations.v1 import models
 
 
 def test_parameter_response(parameter_response: dict) -> None:

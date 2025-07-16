@@ -1,7 +1,7 @@
 """Test calls towards smhi api."""
 
 import pytest
-from smhi.api.v1 import requests as rq
+from smhi.api.observations.v1 import requests as rq
 
 
 def test_category() -> None:

@@ -45,10 +45,7 @@ def _get_request(endpoint: str) -> dict:
     """Get a response from endpoint and parse it to python dict."""
     url = BASE_URL + endpoint
     response = httpx.get(url)
-    if not response.is_success:
-        raise RequestError(
-            f"Failed with status code {response.status_code} when calling {url}"
-        )
+    response.raise_for_status()
 
     return json.loads(response.text)
 

@@ -1,13 +1,27 @@
-[build-system]
-requires = ["setuptools"]
-
 [project]
 name = "smhi"
-version = "0.0.1"
-dependencies = ["httpx", "pydantic"]
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Magnus Sommarsjö", email = "18513718+magnussommarsjo@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.11.7",
+]
 
-[project.optional-dependencies]
-tests = ["pytest"]
-linting = ["black", "ruff"]
-analysis = ["jupyterlab"]
-dev = ["smhi[tests,linting]", "pre-commit"]
+[project.scripts]
+smhi = "smhi:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+    "pytest>=8.4.1",
+    "ruff>=0.12.3",
+]
